@@ -1,0 +1,17 @@
+<!-- Cand folosesti form_with cu un user asta face POST daca nu exista user-ul ala si PATCH daca exista-->
+<%= form_with(model: @user, local: true) do |f|%>
+  <%= render 'shared/error_messages', object: @user %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %>
+
+  <%= f.label :password_confirmation, 'Confirmation' %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+  <%= f.submit yield(:form_button_text), class: 'btn btn-primary' %>
+<% end %>

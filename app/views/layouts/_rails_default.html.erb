@@ -1,0 +1,5 @@
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
+<%= stylesheet_link_tag "application", {media: "all",
+                                        "data-turbo-track": "reload"} %> <!-- Declara sa foloseasca css-ul application din assets-->
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
