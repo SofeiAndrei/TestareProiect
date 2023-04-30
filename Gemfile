@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.1'
+ruby '3.1.3'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '~> 7.0.3'
+gem 'rails', '~> 7.0.4.3'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
@@ -34,7 +34,7 @@ gem 'jbuilder'
 gem 'turbolinks'
 
 # Allow to connect to a Postgres DB
-#gem 'pg'
+gem 'pg'
 
 # Manage app-like JavaScript modules in Rails
 gem 'webpacker'
@@ -50,7 +50,10 @@ gem 'webpacker'
 gem 'bcrypt', '~> 3.1.7'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[ mingw mswin x64_mingw jruby ]
+gem 'tzinfo-data'
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo', '~> 2.0.4'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false

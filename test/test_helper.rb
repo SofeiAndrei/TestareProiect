@@ -5,7 +5,7 @@ require "minitest/reporters" # Asta
 Minitest::Reporters.use! # Si asta sunt pentru teste ca in cazul in care e passed iti face text verde, altfel iti face text rosu
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
-  parallelize(workers: :number_of_processors)
+  # parallelize(workers: :number_of_processors, with: :threads)
 
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all

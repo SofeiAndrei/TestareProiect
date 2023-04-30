@@ -3,7 +3,7 @@ require "test_helper"
 class MicropostTest < ActiveSupport::TestCase
   def setup
     @user = users(:adrian)
-    @micropost = @user.microposts.build(content: 'Lorem Ipsum')
+    @micropost = @user.microposts.build(content: 'Lorem Ipsum', title: 'Title')
     # cu build doar creezi, nu se si salveaza in DB
     # cu create se si salveaza
     # E echivalent cu:
