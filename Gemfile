@@ -40,6 +40,7 @@ gem 'pg'
 gem 'webpacker'
 
 
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -119,6 +120,8 @@ group :test do
   gem 'rails-controller-testing'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'mutant-license'
+  gem 'mutant', '~> 0.11.0'
 end
 
 group :production do
