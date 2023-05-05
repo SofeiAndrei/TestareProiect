@@ -121,6 +121,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
   gem 'mutant-license'
+  gem 'mutant-minitest'
   gem 'mutant', '~> 0.11.0'
 end
 

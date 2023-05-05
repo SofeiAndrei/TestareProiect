@@ -193,6 +193,9 @@ GEM
       sorbet-runtime (~> 0.5.0)
       unparser (~> 0.6.6)
     mutant-license (0.0.0)
+    mutant-minitest (0.11.18)
+      minitest (~> 5.11)
+      mutant (= 0.11.18)
     nenv (0.3.0)
     net-imap (0.3.4)
       date
@@ -384,6 +387,7 @@ DEPENDENCIES
   minitest-reporters
   mutant (~> 0.11.0)
   mutant-license
+  mutant-minitest
   pg
   puma (~> 5.0)
   rails (~> 7.0.4.3)
