@@ -131,4 +131,16 @@ class UserTest < ActiveSupport::TestCase
       assert_not andrei.feed.include?(post_from_unfollowed)
     end
   end
-end
+
+  test 'mutant testing' do
+    EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+    #valid email
+    assert 'oana@mirea.com' =~ EMAIL_REGEX
+    assert 'aaa.bb+cc@dd.ee.ff' =~ EMAIL_REGEX
+    assert 'andrei@oana.ro' =~ EMAIL_REGEX
+    #invalid email
+    assert 'email@' !~ EMAIL_REGEX
+    assert '@gmail.com' !~ EMAIL_REGEX
+    assert 'imiedordeyahoomessenger@yahoo' !~ EMAIL_REGEX
+    end
+  end
